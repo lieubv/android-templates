@@ -1,4 +1,4 @@
-package co.nimblehq.sample.compose.ui.screens.compose
+package co.nimblehq.sample.compose.ui.screens
 
 import co.nimblehq.sample.compose.domain.usecase.UseCase
 import co.nimblehq.sample.compose.domain.usecase.UseCaseResult

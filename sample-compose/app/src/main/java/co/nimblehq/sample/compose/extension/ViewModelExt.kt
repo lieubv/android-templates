@@ -26,10 +26,10 @@ inline fun <reified VM : ViewModel> Fragment.provideViewModels(
     noinline factoryProducer: (() -> ViewModelProvider.Factory)? = null
 ): Lazy<VM> = OverridableLazy(viewModels(ownerProducer, factoryProducer))
 
-@MainThread
-inline fun <reified VM : ViewModel> ComponentActivity.provideViewModels(
-    noinline factoryProducer: (() -> ViewModelProvider.Factory)? = null
-): Lazy<VM> = OverridableLazy(viewModels(factoryProducer))
+//@MainThread
+//inline fun <reified VM : ViewModel> ComponentActivity.provideViewModels(
+//    noinline factoryProducer: (() -> ViewModelProvider.Factory)? = null
+//): Lazy<VM> = OverridableLazy(viewModels(factoryProducer))
 
 class OverridableLazy<T>(var implementation: Lazy<T>) : Lazy<T> {
 

@@ -22,6 +22,7 @@ class HomeViewModel @Inject constructor(
         get() = _uiModels
 
     init {
+        showLoading()
         execute {
             when (val result = useCase.execute()) {
                 is UseCaseResult.Success -> {
@@ -33,6 +34,7 @@ class HomeViewModel @Inject constructor(
                     _error.emit(errorMessage)
                 }
             }
+            hideLoading()
         }
     }
 }
